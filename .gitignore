@@ -1,0 +1,54 @@
+# Local credentials and credential stores
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets.*
+.secrets/
+
+# Personal agent/editor state
+.codex/
+.agents/
+.claude/
+.vscode/
+.idea/
+.DS_Store
+
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+node_modules/
+.cache/
+.tools/
+
+# Private game installations, saves, and experiment outputs
+/factorio/
+/downloads/
+/saves/
+/runs/
+/results/
+/artifacts/
+/recordings/
+/private/
+/data/private/
+*.log
+*.zip
+*.tar
+*.tar.gz
+*.mp4
+*.webm
+
+# Generated build and coverage output
+/build/
+/dist/
+/coverage/
+*.tmp
