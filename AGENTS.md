@@ -9,10 +9,13 @@ Factorio-Bench currently contains a proposed design and repository checks. Do no
 - Do not dump environment variables, authentication headers, credential files, or verbose authentication traces. Filter diagnostics locally before returning any output.
 - Keep game binaries, proprietary assets, saves, raw experiment traces, recordings, and personal agent state outside version control. Follow [the sharing policy](docs/data-sharing.md).
 - A `.gitignore` rule or successful scanner is not proof that content is safe to publish. Review the exact proposed files and Git history before pushing.
+- Keep live deployment topology, private endpoints, account identifiers, customer information, and held-out evaluation data out of public files. Describe public interfaces and conceptual boundaries without disclosing private operations.
 
 ## Make changes reviewable
 
 - Keep source facts, proposed behavior, and measured results distinct. Cite primary sources and preserve version and compatibility limits.
+- Use independent implementation informed by public documentation and authorized observations. Follow [THIRD_PARTY.md](THIRD_PARTY.md) before copying or adapting source; do not imply that our license replaces upstream terms.
+- Preserve the unchanged license text and required notice. Resolve contributor permissions before merging external copyrighted patches intended for commercial relicensing.
 - Use plain writing, descriptive headings, relative repository links, and small changes with a clear purpose. Update the documentation index when adding a durable document.
 - Keep agent control separate from world administration and scoring. Do not introduce free resources, hidden information, or timing shortcuts into the player-equivalent track.
 - Add dependencies only when they provide a clear benefit. Pin executable CI dependencies and keep workflow permissions minimal.

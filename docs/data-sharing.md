@@ -15,7 +15,17 @@ This is a public source repository. Publish the design, original source, and rev
 
 Game executables, proprietary art/audio, downloaded game data, local saves, raw observations and model transcripts, recordings, crash dumps, authentication material, and personal tool state stay in local storage or a separately controlled artifact store. Git stores manifests and approved references to those artifacts only when access and sharing rights have been reviewed. A checksum identifies an artifact; it does not make that artifact safe to distribute.
 
-The native game and upstream projects retain their own names, licenses, and asset rules. Factorio-Bench's license, if selected, covers only work we are entitled to license. Do not copy code from MapleBench, RuneBench, FLE, or another dependency based solely on an architectural citation.
+The native game and upstream projects retain their own names, licenses, and asset rules. Factorio-Bench's [license](../LICENSE) covers only rights we are entitled to grant. Follow [the independent implementation and provenance policy](../THIRD_PARTY.md); an architectural citation does not authorize copying covered code.
+
+## Public architecture and private operations
+
+Public design documents may describe component responsibilities, documented game APIs, agent-facing contracts, scoring rules, illustrative tasks, and reproducibility requirements. These are research specifications, not a map of a live deployment. Keep enough detail for readers to assess what a benchmark would measure.
+
+Keep actual hostnames and addresses, administrative endpoints, account and tenant identifiers, deployment inventories, private network topology, credential-store locations, customer configuration, internal incident procedures, and commercially sensitive capacity or cost plans out of the repository. Held-out tasks, their unreleased seeds and saves, and private training or evaluation datasets also stay in separately controlled storage. These exclusions apply to diagrams, screenshots, commit messages, pull requests, issue text, and CI logs as well as source files.
+
+Before publication, manually inspect the exact diff and its context for private architectural information. A secret detector cannot determine whether an endpoint, diagram, or business plan is confidential. Replace sensitive examples with synthetic, portable descriptions; do not invent deployments or imply a proposed system is already running. The public bootstrap task is an illustrative development task, not a held-out evaluation fixture.
+
+Information already pushed to a public repository cannot be made confidential by deleting the latest copy or changing the license. If private material is discovered in published history, stop further publication and follow [the security policy](../SECURITY.md); do not describe a later cleanup as undoing prior exposure.
 
 ## Collect less and separate records
 

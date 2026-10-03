@@ -19,5 +19,7 @@ The [environment design](factorio-bench-design.md) is the main technical documen
 - [Contributing](../CONTRIBUTING.md): writing, review, validation, and public changes.
 - [Data sharing](data-sharing.md): public source, private run evidence, and reviewed exports.
 - [Security](../SECURITY.md): credential handling and sensitive issue reporting.
+- [Third-party references](../THIRD_PARTY.md): independent implementation, provenance, and game rights.
+- [License](../LICENSE) and [notice](../NOTICE): permissions for the project's original work.
 
 Keep design requirements here and implementation instructions alongside the code they describe once that code exists. A new document should state its status, intended reader, and relationship to the main design. Update this index when adding documentation.
