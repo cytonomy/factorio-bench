@@ -24,6 +24,7 @@ The proposed long-term scope includes the base game and Space Age under separate
 | [Contributing](CONTRIBUTING.md) | Propose changes, write evidence-based documentation, and run checks |
 | [Data sharing](docs/data-sharing.md) | Decide what belongs in a public change or result bundle |
 | [Security](SECURITY.md) | Handle credentials and report security issues |
+| [Third-party references](THIRD_PARTY.md) | Separate design inspiration from incorporated material and game rights |
 
 The [implementation milestones](docs/factorio-bench-design.md#implementation-milestones-and-acceptance) begin with a native capability audit, controlled player actions, and one independently verified task. The [architecture](docs/factorio-bench-design.md#architecture-and-trust-boundaries) keeps the agent, game adapter, verifier, and viewer separate.
 
@@ -46,8 +47,10 @@ These checks support repository hygiene; they do not validate Factorio gameplay 
 
 Factorio-Bench is an independent project and is not affiliated with or endorsed by Wube Software. Factorio belongs to Wube Software. Game executables, proprietary assets, and private run artifacts are not distributed in this repository. The native backend design requires a separately provisioned game installation.
 
-MapleBench, RuneBench, and the [Factorio Learning Environment](https://github.com/JackHopkins/factorio-learning-environment) inform the design. No upstream implementation has been copied into this repository; any future reuse must preserve its applicable license and attribution.
+MapleBench, RuneBench, and the [Factorio Learning Environment](https://github.com/JackHopkins/factorio-learning-environment) inform the design. The default is an independent implementation informed by public documentation and observed behavior. No upstream implementation has been incorporated into this repository. See [THIRD_PARTY.md](THIRD_PARTY.md) for provenance and the review required before any code reuse.
 
 ## Project license
 
-A license for this project's original work has not been selected yet. Public availability is not a license grant. The upstream projects and game content retain their own licenses and rights.
+Original source and accompanying original documentation are available under [PolyForm Noncommercial 1.0.0](LICENSE), except material explicitly identified as subject to separate terms. The project is **source available**; PolyForm Noncommercial is not an open-source license. Preserve the [required notice](NOTICE).
+
+The license permits noncommercial purposes and the institutional uses specified in its terms. Uses outside those permissions require a separate agreement from the relevant rights holder. Cytonomy can discuss commercial terms for rights it controls; open a non-confidential licensing inquiry through [GitHub Issues](https://github.com/cytonomy/factorio-bench/issues). An inquiry is not permission to begin the proposed use. The full license controls, and neither it nor a commercial harness agreement grants rights to the game or third-party material.

@@ -15,6 +15,12 @@ Useful contributions at this stage include:
 - Defining a fixture and expected outcome for an acceptance test.
 - Improving terminology, navigation, citations, or an ambiguous requirement.
 
+## Contribution rights
+
+The project's original work is offered under [PolyForm Noncommercial 1.0.0](LICENSE), with potential separate commercial agreements for rights Cytonomy controls. Keep source provenance clear and follow [the independent implementation policy](THIRD_PARTY.md#independent-implementation).
+
+Before merging copyrightable contributions from outside Cytonomy, maintainers must document the contributor's right to submit the work and separately agree on permissions sufficient for both the published license and the intended commercial licensing. This repository does not currently provide a contributor license agreement. Opening an issue or pull request does not transfer copyright or automatically grant broader commercial relicensing rights. Until the necessary permissions are agreed, keep the patch unmerged; factual feedback and design discussion are welcome.
+
 ## Write claims that can be checked
 
 Distinguish a proposal, a documented API capability, and observed behavior in a running environment. Cite primary sources for external facts. Use a commit or version permalink for implementation details when available, and state when a reference follows a moving branch. Record the relevant version, setup, and limitations with experimental observations.
@@ -33,9 +39,9 @@ If you find a credential exposure or other sensitive security issue, follow [SEC
 
 ## Check a change
 
-From the repository root, run:
-
 Use Git, Make, Python 3.9 or newer, and Gitleaks 8.30.1 or newer on `PATH`. The repository checks need no game installation or model credentials.
+
+From the repository root, run:
 
 ```sh
 make check

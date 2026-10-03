@@ -34,7 +34,7 @@ The following are source observations. The architecture and requirements in subs
 | --- | --- | --- |
 | [MapleBench](https://github.com/dmarzzz/maplebench) | A game adapter and narrow SDK connect agents to a server; the project separates authoritative outcomes and recording provenance from presentation. | Keep control, verification, and viewing separate. Capture comparable initial state and retain unsuccessful attempts. |
 | [RuneBench](https://github.com/MaxBittker/RuneBench) | Generated tasks package instructions, an SDK environment, time budgets, and verifier logic for coding agents. | Generate versioned task bundles from one definition; offer an optional Harbor integration without making Harbor part of the game protocol. |
-| [Factorio Learning Environment](https://github.com/JackHopkins/factorio-learning-environment) | An existing environment already evaluates agents in actual Factorio through generated Python programs and provides experiment tooling. | Evaluate its transport, deployment, and observation code before writing a new bridge. Audit the semantics of individual tools before reusing them. |
+| [Factorio Learning Environment](https://github.com/JackHopkins/factorio-learning-environment) | An existing environment already evaluates agents in actual Factorio through generated Python programs and provides experiment tooling. | Study its documented behavior to inform our adapter requirements and conformance tests. Any source reuse requires a separate provenance and license review. |
 
 These projects motivate the design; their scores are not comparable to Factorio-Bench scores. Upstream implementation details can differ from README summaries, so any adopted component must be locked to a reviewed revision.
 
@@ -100,6 +100,8 @@ The initial native capability audit starts here. Documented APIs are implementat
 | Native frames | `take_screenshot` does nothing in headless mode. [LuaGameScript](https://lua-api.factorio.com/2.0.77/classes/LuaGameScript.html) | Use a graphical observer/client with matching content, synchronize frames to ticks, and ensure it cannot change the task state. |
 
 ## Architecture and trust boundaries
+
+This section describes proposed component responsibilities and public evaluation boundaries. Live deployment topology, private endpoints, operator accounts, and held-out evaluation material belong outside this repository, as specified in [the sharing policy](data-sharing.md#public-architecture-and-private-operations). Implementation follows [the independent development policy](../THIRD_PARTY.md#independent-implementation).
 
 ```mermaid
 flowchart LR
@@ -329,7 +331,7 @@ Never mix simulator and native scores into one undifferentiated leaderboard. Pro
 
 | Milestone | Deliverable | Exit evidence |
 | --- | --- | --- |
-| 0. Resolve integration | Pin a native release; audit FLE reuse and the required player actions; choose an initial fixture | A documented capability matrix and a worker boot/reset smoke test |
+| 0. Resolve integration | Pin a native release; study relevant public environment behavior and the required player actions; choose an initial fixture | A documented capability matrix and a worker boot/reset smoke test |
 | 1. Establish control | Implement the benchmark mod, gateway, receipts, visibility policy, and bounded stepping | Native action costs demonstrated; no free placement or hidden-state access; pause behavior validated |
 | 2. Complete one task | Bootstrap fixture, SDK, event log, independent verifier, scripted baseline | End-to-end success and no-op failure; score recomputed from retained evidence; final state reconciled |
 | 3. Establish repeatability | Immutable fixtures, checkpoint/resume policy, worker isolation, experiment manifest | Ten reset checks with matching declared start fingerprints; deterministic scripted reruns; interruption cases explained |
