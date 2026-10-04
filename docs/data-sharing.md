@@ -10,6 +10,7 @@ This is a public source repository. Publish the design, original source, and rev
 | Task definitions and manifests | Include rules, versions, seeds where intended, and checksums. Use portable paths and non-secret identifiers. Keep held-out evaluation content separate. |
 | Configuration examples | Use obvious placeholders such as `REPLACE_LOCALLY`. Never copy a working credential or a personal configuration file. |
 | Small synthetic fixtures | Include only data created for testing that contains no credentials, personal information, or restricted assets. Label it synthetic. |
+| Synthetic showcase screenshots | Publish only the reviewed, metadata-free PNG exports named in the [showcase media policy](assets/README.md), with a matching digest and dimensions in its manifest. These are interface illustrations, not game footage or agent results. |
 | Reviewed results | Publish aggregates and selected evidence with task, engine, agent, and verifier provenance. Preserve failed-attempt counts and explain exclusions. |
 | Upstream references | Link to the source and record the reviewed revision. Track attribution and license obligations before incorporating code. |
 
@@ -36,6 +37,8 @@ Keep three destinations distinct:
 3. **Publication export:** A new, reviewed bundle containing only the records selected for sharing.
 
 Do not publish directly from a live run directory. Generate an export with an explicit field allowlist. Remove credential fields, authorization headers, personal paths, account identifiers that are not needed for attribution, private URLs, and free-form diagnostics unless specifically reviewed. Inspect images and recordings for visible account data, browser UI, or terminal content. Automated text scans cannot clear visual media for publication.
+
+The synthetic showcase has a narrow exception for two named PNG exports under `docs/assets/`. Keep raw captures outside Git, remove embedded metadata, and inspect every visible pixel before recording review in the media manifest. Checks validate the manifest against both the working files and staged media, including checksums, dimensions, and PNG structure. An unchanged checksum preserves the identity of an inspected file; it does not prove that the image is safe. This exception does not authorize native game assets, arbitrary screenshots, or raw experiment recordings.
 
 Experiment manifests must state the retention period and who can read the raw records. Keep an immutable original only in its authorized storage; create a redacted derivative for sharing. Describe redaction and missing evidence in the publication so readers can assess its limits. Do not claim a public result is fully reproducible when necessary inputs are unavailable.
 

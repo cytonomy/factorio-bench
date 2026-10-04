@@ -1,6 +1,8 @@
 # Documentation
 
-Factorio-Bench is a proposed benchmark environment. The documents below describe intended behavior and acceptance criteria; there is no runnable benchmark yet.
+Factorio-Bench is a proposed benchmark environment. The native benchmark is not implemented. A runnable synthetic evidence demo makes the proposed scoring contract tangible without running a game or an AI model.
+
+Start with [the evidence demo](examples.md) to run three examples and explore their outcomes. The [reviewed media guide](assets/README.md) explains the provenance of its screenshots.
 
 ## Environment design
 
