@@ -1,0 +1,1625 @@
+{
+  "schema_version": "factorio-bench.demo.v1",
+  "provenance": "Synthetic illustration — no game or model was run.",
+  "task": {
+    "id": "iron-bootstrap",
+    "evaluation_start_tick": 54000,
+    "evaluation_end_tick": 72000,
+    "window_ticks": 3600,
+    "minimum_per_window": 30
+  },
+  "cases": [
+    {
+      "id": "steady-line",
+      "title": "The steady line",
+      "subtitle": "Production holds after handoff.",
+      "description": "An authored trace of a balanced ore-to-plate line. Every evaluation window clears all three output thresholds.",
+      "diagnosis": "The line sustains useful output in all five windows. Passing is based on each window, so a brief production spike cannot carry the result.",
+      "verdict": "pass",
+      "windows": [
+        {
+          "index": 1,
+          "start_tick": 54000,
+          "end_tick": 57600,
+          "mined": 40,
+          "smelted": 40,
+          "delivered": 40,
+          "manual_delivered": 0,
+          "powered": true,
+          "passed": true
+        },
+        {
+          "index": 2,
+          "start_tick": 57600,
+          "end_tick": 61200,
+          "mined": 42,
+          "smelted": 42,
+          "delivered": 42,
+          "manual_delivered": 0,
+          "powered": true,
+          "passed": true
+        },
+        {
+          "index": 3,
+          "start_tick": 61200,
+          "end_tick": 64800,
+          "mined": 40,
+          "smelted": 40,
+          "delivered": 40,
+          "manual_delivered": 0,
+          "powered": true,
+          "passed": true
+        },
+        {
+          "index": 4,
+          "start_tick": 64800,
+          "end_tick": 68400,
+          "mined": 44,
+          "smelted": 44,
+          "delivered": 44,
+          "manual_delivered": 0,
+          "powered": true,
+          "passed": true
+        },
+        {
+          "index": 5,
+          "start_tick": 68400,
+          "end_tick": 72000,
+          "mined": 42,
+          "smelted": 42,
+          "delivered": 42,
+          "manual_delivered": 0,
+          "powered": true,
+          "passed": true
+        }
+      ],
+      "events": [
+        {
+          "id": "steady-line-001",
+          "tick": 54000,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "steady-line-002",
+          "tick": 54300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-003",
+          "tick": 54380,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-004",
+          "tick": 54460,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-005",
+          "tick": 55100,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-006",
+          "tick": 55180,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-007",
+          "tick": 55260,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-008",
+          "tick": 55900,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-009",
+          "tick": 55980,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-010",
+          "tick": 56060,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-011",
+          "tick": 56700,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-012",
+          "tick": 56780,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-013",
+          "tick": 56860,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-014",
+          "tick": 57600,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "steady-line-015",
+          "tick": 57900,
+          "kind": "mine",
+          "quantity": 11,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-016",
+          "tick": 57980,
+          "kind": "smelt",
+          "quantity": 11,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-017",
+          "tick": 58060,
+          "kind": "deliver",
+          "quantity": 11,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-018",
+          "tick": 58700,
+          "kind": "mine",
+          "quantity": 11,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-019",
+          "tick": 58780,
+          "kind": "smelt",
+          "quantity": 11,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-020",
+          "tick": 58860,
+          "kind": "deliver",
+          "quantity": 11,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-021",
+          "tick": 59500,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-022",
+          "tick": 59580,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-023",
+          "tick": 59660,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-024",
+          "tick": 60300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-025",
+          "tick": 60380,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-026",
+          "tick": 60460,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-027",
+          "tick": 61200,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "steady-line-028",
+          "tick": 61500,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-029",
+          "tick": 61580,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-030",
+          "tick": 61660,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-031",
+          "tick": 62300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-032",
+          "tick": 62380,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-033",
+          "tick": 62460,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-034",
+          "tick": 63100,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-035",
+          "tick": 63180,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-036",
+          "tick": 63260,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-037",
+          "tick": 63900,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-038",
+          "tick": 63980,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-039",
+          "tick": 64060,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-040",
+          "tick": 64800,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "steady-line-041",
+          "tick": 65100,
+          "kind": "mine",
+          "quantity": 11,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-042",
+          "tick": 65180,
+          "kind": "smelt",
+          "quantity": 11,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-043",
+          "tick": 65260,
+          "kind": "deliver",
+          "quantity": 11,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-044",
+          "tick": 65900,
+          "kind": "mine",
+          "quantity": 11,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-045",
+          "tick": 65980,
+          "kind": "smelt",
+          "quantity": 11,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-046",
+          "tick": 66060,
+          "kind": "deliver",
+          "quantity": 11,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-047",
+          "tick": 66700,
+          "kind": "mine",
+          "quantity": 11,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-048",
+          "tick": 66780,
+          "kind": "smelt",
+          "quantity": 11,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-049",
+          "tick": 66860,
+          "kind": "deliver",
+          "quantity": 11,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-050",
+          "tick": 67500,
+          "kind": "mine",
+          "quantity": 11,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-051",
+          "tick": 67580,
+          "kind": "smelt",
+          "quantity": 11,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-052",
+          "tick": 67660,
+          "kind": "deliver",
+          "quantity": 11,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-053",
+          "tick": 68400,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "steady-line-054",
+          "tick": 68700,
+          "kind": "mine",
+          "quantity": 11,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-055",
+          "tick": 68780,
+          "kind": "smelt",
+          "quantity": 11,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-056",
+          "tick": 68860,
+          "kind": "deliver",
+          "quantity": 11,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-057",
+          "tick": 69500,
+          "kind": "mine",
+          "quantity": 11,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-058",
+          "tick": 69580,
+          "kind": "smelt",
+          "quantity": 11,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-059",
+          "tick": 69660,
+          "kind": "deliver",
+          "quantity": 11,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-060",
+          "tick": 70300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-061",
+          "tick": 70380,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-062",
+          "tick": 70460,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "steady-line-063",
+          "tick": 71100,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "steady-line-064",
+          "tick": 71180,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "steady-line-065",
+          "tick": 71260,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        }
+      ],
+      "totals": {
+        "mined": 208,
+        "smelted": 208,
+        "delivered": 208,
+        "manual_delivered": 0
+      }
+    },
+    {
+      "id": "fuel-starved",
+      "title": "The fading furnace",
+      "subtitle": "A strong start hides a supply failure.",
+      "description": "An authored fuel-shortage scenario: mining continues while furnace output declines. The first two windows pass; the remaining three fail.",
+      "diagnosis": "Smelting falls below the threshold in window 3, then stops. The fuel-shortage explanation is part of the authored scenario; these counters alone do not prove its cause.",
+      "verdict": "fail",
+      "windows": [
+        {
+          "index": 1,
+          "start_tick": 54000,
+          "end_tick": 57600,
+          "mined": 40,
+          "smelted": 40,
+          "delivered": 40,
+          "manual_delivered": 0,
+          "powered": true,
+          "passed": true
+        },
+        {
+          "index": 2,
+          "start_tick": 57600,
+          "end_tick": 61200,
+          "mined": 40,
+          "smelted": 38,
+          "delivered": 38,
+          "manual_delivered": 0,
+          "powered": true,
+          "passed": true
+        },
+        {
+          "index": 3,
+          "start_tick": 61200,
+          "end_tick": 64800,
+          "mined": 40,
+          "smelted": 16,
+          "delivered": 16,
+          "manual_delivered": 0,
+          "powered": true,
+          "passed": false
+        },
+        {
+          "index": 4,
+          "start_tick": 64800,
+          "end_tick": 68400,
+          "mined": 40,
+          "smelted": 0,
+          "delivered": 0,
+          "manual_delivered": 0,
+          "powered": true,
+          "passed": false
+        },
+        {
+          "index": 5,
+          "start_tick": 68400,
+          "end_tick": 72000,
+          "mined": 40,
+          "smelted": 0,
+          "delivered": 0,
+          "manual_delivered": 0,
+          "powered": true,
+          "passed": false
+        }
+      ],
+      "events": [
+        {
+          "id": "fuel-starved-001",
+          "tick": 54000,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "fuel-starved-002",
+          "tick": 54300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-003",
+          "tick": 54380,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-004",
+          "tick": 54460,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-005",
+          "tick": 55100,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-006",
+          "tick": 55180,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-007",
+          "tick": 55260,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-008",
+          "tick": 55900,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-009",
+          "tick": 55980,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-010",
+          "tick": 56060,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-011",
+          "tick": 56700,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-012",
+          "tick": 56780,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-013",
+          "tick": 56860,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-014",
+          "tick": 57600,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "fuel-starved-015",
+          "tick": 57900,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-016",
+          "tick": 57980,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-017",
+          "tick": 58060,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-018",
+          "tick": 58700,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-019",
+          "tick": 58780,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-020",
+          "tick": 58860,
+          "kind": "deliver",
+          "quantity": 10,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-021",
+          "tick": 59500,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-022",
+          "tick": 59580,
+          "kind": "smelt",
+          "quantity": 9,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-023",
+          "tick": 59660,
+          "kind": "deliver",
+          "quantity": 9,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-024",
+          "tick": 60300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-025",
+          "tick": 60380,
+          "kind": "smelt",
+          "quantity": 9,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-026",
+          "tick": 60460,
+          "kind": "deliver",
+          "quantity": 9,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-027",
+          "tick": 61200,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "fuel-starved-028",
+          "tick": 61500,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-029",
+          "tick": 61580,
+          "kind": "smelt",
+          "quantity": 4,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-030",
+          "tick": 61660,
+          "kind": "deliver",
+          "quantity": 4,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-031",
+          "tick": 62300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-032",
+          "tick": 62380,
+          "kind": "smelt",
+          "quantity": 4,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-033",
+          "tick": 62460,
+          "kind": "deliver",
+          "quantity": 4,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-034",
+          "tick": 63100,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-035",
+          "tick": 63180,
+          "kind": "smelt",
+          "quantity": 4,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-036",
+          "tick": 63260,
+          "kind": "deliver",
+          "quantity": 4,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-037",
+          "tick": 63900,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-038",
+          "tick": 63980,
+          "kind": "smelt",
+          "quantity": 4,
+          "source": "furnace"
+        },
+        {
+          "id": "fuel-starved-039",
+          "tick": 64060,
+          "kind": "deliver",
+          "quantity": 4,
+          "source": "inserter"
+        },
+        {
+          "id": "fuel-starved-040",
+          "tick": 64800,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "fuel-starved-041",
+          "tick": 65100,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-042",
+          "tick": 65900,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-043",
+          "tick": 66700,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-044",
+          "tick": 67500,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-045",
+          "tick": 68400,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "fuel-starved-046",
+          "tick": 68700,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-047",
+          "tick": 69500,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-048",
+          "tick": 70300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "fuel-starved-049",
+          "tick": 71100,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        }
+      ],
+      "totals": {
+        "mined": 200,
+        "smelted": 94,
+        "delivered": 94,
+        "manual_delivered": 0
+      }
+    },
+    {
+      "id": "hand-fed",
+      "title": "The hand-fed shortcut",
+      "subtitle": "A full chest does not prove automation.",
+      "description": "An adversarial authored trace adds player deposits to a weak delivery line. The total stock looks healthy, but only inserter transfers count toward automated delivery.",
+      "diagnosis": "Each window has only 8 qualifying deliveries. The 32 manual deposits are shown separately and excluded from the delivery score; they cannot turn a failing line into a pass.",
+      "verdict": "fail",
+      "windows": [
+        {
+          "index": 1,
+          "start_tick": 54000,
+          "end_tick": 57600,
+          "mined": 40,
+          "smelted": 40,
+          "delivered": 8,
+          "manual_delivered": 32,
+          "powered": true,
+          "passed": false
+        },
+        {
+          "index": 2,
+          "start_tick": 57600,
+          "end_tick": 61200,
+          "mined": 40,
+          "smelted": 40,
+          "delivered": 8,
+          "manual_delivered": 32,
+          "powered": true,
+          "passed": false
+        },
+        {
+          "index": 3,
+          "start_tick": 61200,
+          "end_tick": 64800,
+          "mined": 40,
+          "smelted": 40,
+          "delivered": 8,
+          "manual_delivered": 32,
+          "powered": true,
+          "passed": false
+        },
+        {
+          "index": 4,
+          "start_tick": 64800,
+          "end_tick": 68400,
+          "mined": 40,
+          "smelted": 40,
+          "delivered": 8,
+          "manual_delivered": 32,
+          "powered": true,
+          "passed": false
+        },
+        {
+          "index": 5,
+          "start_tick": 68400,
+          "end_tick": 72000,
+          "mined": 40,
+          "smelted": 40,
+          "delivered": 8,
+          "manual_delivered": 32,
+          "powered": true,
+          "passed": false
+        }
+      ],
+      "events": [
+        {
+          "id": "hand-fed-001",
+          "tick": 54000,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "hand-fed-002",
+          "tick": 54300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-003",
+          "tick": 54380,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-004",
+          "tick": 54460,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-005",
+          "tick": 54540,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-006",
+          "tick": 55100,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-007",
+          "tick": 55180,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-008",
+          "tick": 55260,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-009",
+          "tick": 55340,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-010",
+          "tick": 55900,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-011",
+          "tick": 55980,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-012",
+          "tick": 56060,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-013",
+          "tick": 56140,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-014",
+          "tick": 56700,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-015",
+          "tick": 56780,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-016",
+          "tick": 56860,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-017",
+          "tick": 56940,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-018",
+          "tick": 57600,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "hand-fed-019",
+          "tick": 57900,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-020",
+          "tick": 57980,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-021",
+          "tick": 58060,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-022",
+          "tick": 58140,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-023",
+          "tick": 58700,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-024",
+          "tick": 58780,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-025",
+          "tick": 58860,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-026",
+          "tick": 58940,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-027",
+          "tick": 59500,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-028",
+          "tick": 59580,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-029",
+          "tick": 59660,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-030",
+          "tick": 59740,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-031",
+          "tick": 60300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-032",
+          "tick": 60380,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-033",
+          "tick": 60460,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-034",
+          "tick": 60540,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-035",
+          "tick": 61200,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "hand-fed-036",
+          "tick": 61500,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-037",
+          "tick": 61580,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-038",
+          "tick": 61660,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-039",
+          "tick": 61740,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-040",
+          "tick": 62300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-041",
+          "tick": 62380,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-042",
+          "tick": 62460,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-043",
+          "tick": 62540,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-044",
+          "tick": 63100,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-045",
+          "tick": 63180,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-046",
+          "tick": 63260,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-047",
+          "tick": 63340,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-048",
+          "tick": 63900,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-049",
+          "tick": 63980,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-050",
+          "tick": 64060,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-051",
+          "tick": 64140,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-052",
+          "tick": 64800,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "hand-fed-053",
+          "tick": 65100,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-054",
+          "tick": 65180,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-055",
+          "tick": 65260,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-056",
+          "tick": 65340,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-057",
+          "tick": 65900,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-058",
+          "tick": 65980,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-059",
+          "tick": 66060,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-060",
+          "tick": 66140,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-061",
+          "tick": 66700,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-062",
+          "tick": 66780,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-063",
+          "tick": 66860,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-064",
+          "tick": 66940,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-065",
+          "tick": 67500,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-066",
+          "tick": 67580,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-067",
+          "tick": 67660,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-068",
+          "tick": 67740,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-069",
+          "tick": 68400,
+          "kind": "power",
+          "quantity": 1,
+          "source": "grid"
+        },
+        {
+          "id": "hand-fed-070",
+          "tick": 68700,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-071",
+          "tick": 68780,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-072",
+          "tick": 68860,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-073",
+          "tick": 68940,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-074",
+          "tick": 69500,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-075",
+          "tick": 69580,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-076",
+          "tick": 69660,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-077",
+          "tick": 69740,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-078",
+          "tick": 70300,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-079",
+          "tick": 70380,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-080",
+          "tick": 70460,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-081",
+          "tick": 70540,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        },
+        {
+          "id": "hand-fed-082",
+          "tick": 71100,
+          "kind": "mine",
+          "quantity": 10,
+          "source": "electric-drill"
+        },
+        {
+          "id": "hand-fed-083",
+          "tick": 71180,
+          "kind": "smelt",
+          "quantity": 10,
+          "source": "furnace"
+        },
+        {
+          "id": "hand-fed-084",
+          "tick": 71260,
+          "kind": "deliver",
+          "quantity": 2,
+          "source": "inserter"
+        },
+        {
+          "id": "hand-fed-085",
+          "tick": 71340,
+          "kind": "manual-deliver",
+          "quantity": 8,
+          "source": "player"
+        }
+      ],
+      "totals": {
+        "mined": 200,
+        "smelted": 200,
+        "delivered": 40,
+        "manual_delivered": 160
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Explore three synthetic factory traces and see how sustained production earns a passing verdict. A runnable Factorio-Bench evidence demo.">
+  <title>Factorio-Bench — Evidence Lab</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#explorer">Skip to explorer</a>
+  <div class="page">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="Factorio-Bench home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>factorio<span class="brand-light">–bench</span></a>
+      <nav aria-label="Main navigation"><a class="active" href="#explorer">Evidence lab</a><a href="#method">The method <span aria-hidden="true">↘</span></a><a href="https://github.com/cytonomy/factorio-bench">Repository <span aria-hidden="true">↗</span></a></nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div><p class="eyebrow"><span class="status-dot"></span> An environment for evaluating AI agents</p><h1 id="page-title">Build a factory.<br><span>Prove it works.</span></h1><p class="lead">A good plan is only the beginning. Follow the materials,<br class="desktop-break"> inspect the evidence, and measure what keeps running.</p></div>
+        <aside class="spec-card" aria-label="Demo specification"><div class="spec-heading"><span class="mini-symbol" aria-hidden="true">↗</span><span>FIRST PRINCIPLE</span></div><p>Production is a process.<br>Evaluate the whole chain.</p><dl><div><dt>Task</dt><dd>Iron bootstrap</dd></div><div><dt>Verification</dt><dd>5 × 3,600 ticks</dd></div><div><dt>Target / window</dt><dd>30 at every stage</dd></div></dl></aside>
+      </section>
+
+      <div class="disclosure"><span class="disclosure-label">SYNTHETIC DEMO</span><p>Generated traces. Runnable verifier. Illustrative factory. <span>No game or AI model was run.</span></p><span class="edition">LAB / 001</span></div>
+
+      <section id="explorer" class="explorer" aria-labelledby="explorer-title">
+        <div class="section-heading"><h2 id="explorer-title"><span class="section-number">01</span> Follow the evidence</h2><span class="muted mono">IRON / ORE → PLATE → DELIVERY</span></div>
+        <div class="workspace">
+          <aside class="scenario-panel" aria-label="Choose a synthetic example"><p class="eyebrow small">Three ways to build</p><div id="scenarios" class="scenario-list"></div><div class="scenario-note"><span class="note-symbol" aria-hidden="true">↳</span><p>Same task. Different outcomes.<br>Choose a trace to inspect<br class="desktop-break"> what the totals leave out.</p></div><p class="source-note">Original schematic<br>No Factorio assets</p></aside>
+          <div class="run-panel">
+            <div class="run-header"><div><p class="eyebrow small">AUTOMATED IRON PRODUCTION</p><h3 id="run-title">Loading example…</h3></div><span id="verdict" class="verdict">LOADING</span></div>
+            <div class="factory" id="factory">
+              <div class="canvas-label"><span class="status-dot"></span><span id="canvas-phase">HANDS-OFF VERIFICATION</span></div><span class="canvas-coordinates mono">SCHEMATIC / NOT GAMEPLAY</span>
+              <svg class="factory-map" viewBox="0 0 960 320" role="img" aria-labelledby="map-title map-desc">
+                <title id="map-title">Illustrative iron production chain</title><desc id="map-desc">An electric drill mines ore, a furnace smelts plates, and an inserter delivers them. Counts represent the selected synthetic verification window.</desc>
+                <defs>
+                  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dce1d6" stroke-width=".7"/></pattern>
+                  <pattern id="ore" width="22" height="22" patternUnits="userSpaceOnUse"><path d="m4 8 6-4 7 7-5 6-9-1Z" fill="#9fae9c" stroke="#71866d" stroke-width="1"/></pattern>
+                  <linearGradient id="metal" x2="0" y2="1"><stop stop-color="#496655"/><stop offset="1" stop-color="#284838"/></linearGradient>
+                  <linearGradient id="heat" x2="0" y2="1"><stop stop-color="#ecae60"/><stop offset="1" stop-color="#b95528"/></linearGradient>
+                </defs>
+                <rect width="960" height="320" fill="url(#grid)"/>
+                <g class="power-network" fill="none" stroke="#9baa8e"><path d="M173 116V58H785V119" stroke-dasharray="5 5"/><path d="M472 58V112" stroke-dasharray="5 5"/><circle cx="173" cy="58" r="4" fill="#738566"/><circle cx="472" cy="58" r="4" fill="#738566"/><circle cx="785" cy="58" r="4" fill="#738566"/></g>
+                <g class="belts"><path d="M216 170H421M519 170H738" stroke="#c8cdbd" stroke-width="32"/><path d="M216 170H421M519 170H738" stroke="#455d4c" stroke-width="23"/><path class="belt-motion" d="M216 170H421M519 170H738" stroke="#bdc6ac" stroke-width="16" stroke-dasharray="3 12"/></g>
+                <g class="ore-items" fill="#849c93" stroke="#d1dccb" stroke-width="2"><path d="m273 162 7-4 7 8-3 11-12-2Z"/><path d="m333 162 7-4 7 8-3 11-12-2Z"/></g>
+                <g class="plate-items" fill="#cfb888" stroke="#f5e5bf" stroke-width="2"><path d="m574 163 15-4 9 10-16 5Z"/><path d="m635 163 15-4 9 10-16 5Z"/></g>
+                <g class="machine drill">
+                  <ellipse cx="170" cy="182" rx="82" ry="53" fill="#21382c" opacity=".08"/>
+                  <path d="m94 154 13-31 100-9 31 39-8 64-105 11-39-34Z" fill="url(#ore)"/>
+                  <path d="m130 119 28-14 62 16v66l-28 16-62-17Z" fill="#2d4938"/><path d="m130 119 62 16 28-14-62-16Z" fill="#789077"/>
+                  <path d="m137 128 48 13v51l-48-12Z" fill="url(#metal)"/><path d="m192 135 28-14v66l-28 16Z" fill="#1e3d2f"/>
+                  <path d="m160 110 15 4v53l-15-4Z" fill="#e8b45e"/><path d="m148 151 38 10v10l-38-10Z" fill="#f2c97e"/>
+                  <path d="m153 183 7-13 20 5-7 13Z" fill="#a1b2a0"/>
+                  <circle cx="204" cy="148" r="4" fill="#bddd91"/><path d="m198 164 15-8m-15 16 15-8m-15 16 15-8" stroke="#53715a" stroke-width="3"/>
+                </g>
+                <g class="machine furnace">
+                  <ellipse cx="471" cy="193" rx="68" ry="34" fill="#21382c" opacity=".08"/>
+                  <path d="m427 118 30-15 61 20v72l-30 16-61-20Z" fill="#855e41"/><path d="m427 118 61 19 30-14-61-20Z" fill="#c3b09a"/><path d="m488 137 30-14v72l-30 16Z" fill="#72523d"/>
+                  <path d="m436 137 42 13v41l-42-13Z" fill="#342f24"/><path class="furnace-glow" d="m443 151 27 9v26l-27-9Z" fill="url(#heat)"/>
+                  <path d="m448 91 19-8 18 6v43l-19 8-18-6Z" fill="#708070"/><path d="m448 91 18 6 19-8-18-6Z" fill="#aab09a"/><path d="m466 97 19-8v43l-19 8Z" fill="#485b4a"/>
+                  <path d="m437 195 40 12m-40-7 40 12" stroke="#baa284" stroke-width="3"/><circle cx="504" cy="152" r="4" fill="#e6b668"/>
+                </g>
+                <g class="machine delivery">
+                  <ellipse cx="783" cy="194" rx="67" ry="32" fill="#21382c" opacity=".08"/>
+                  <path d="m756 142 34-18 54 15v56l-34 20-54-17Z" fill="#436151"/><path d="m756 142 54 17 34-20-54-15Z" fill="#8b9f7f"/><path d="m810 159 34-20v56l-34 20Z" fill="#2a4837"/>
+                  <path d="m763 153 39 12v32l-39-12Z" fill="#304e3c" stroke="#637e63" stroke-width="2"/><path d="m774 145 28 8 27-15-27-7Z" fill="#bdc8ab"/>
+                  <path d="M747 154 732 129 758 115 782 134" fill="none" stroke="#d2a453" stroke-width="9" stroke-linejoin="round"/><circle cx="732" cy="129" r="7" fill="#eac277" stroke="#6b6941" stroke-width="2"/><path d="m777 130 6 9 8-4" fill="none" stroke="#d2a453" stroke-width="4"/>
+                  <path d="m817 179 19-11m-19 19 19-11" stroke="#526e52" stroke-width="3"/>
+                </g>
+                <g class="map-labels" text-anchor="middle"><text x="173" y="254" class="node-label">01 / EXTRACT</text><text x="472" y="254" class="node-label">02 / TRANSFORM</text><text x="785" y="254" class="node-label">03 / DELIVER</text><text x="173" y="278" class="node-value" id="map-mined">— ore</text><text x="472" y="278" class="node-value" id="map-smelted">— plates</text><text x="785" y="278" class="node-value" id="map-delivered">— verified</text></g>
+              </svg>
+              <div id="fault-note" class="fault-note" hidden></div>
+            </div>
+            <div class="playback"><button id="play" class="play-button" aria-label="Play verification windows" disabled><span aria-hidden="true">▶</span> Play</button><div class="scrubber"><label for="window">Window <strong id="window-number">01 / 05</strong></label><input id="window" type="range" min="0" max="4" value="0" step="1" aria-valuetext="Window 1 of 5" disabled></div><div class="tick"><span class="eyebrow small">TICK INTERVAL</span><span id="tick-range" class="mono">54,000–57,600</span></div></div>
+          </div>
+        </div>
+        <div class="evidence-grid">
+          <section class="chart-panel" aria-labelledby="chart-title"><div class="panel-heading"><h3 id="chart-title">Consistency earns the pass.</h3><span class="mono small">FIVE WINDOWS / THREE STAGES</span></div><p class="panel-description">Each stage must reach 30 in every window. One good total is not enough.</p><div id="chart" class="chart" role="group" aria-label="Stage counts by verification window"></div><div class="chart-legend"><span><i class="legend-mine"></i> Ore mined</span><span><i class="legend-smelt"></i> Plates smelted</span><span><i class="legend-deliver"></i> Inserter delivery</span><span class="threshold-key">- - Target 30</span></div></section>
+          <section class="verifier-panel" aria-labelledby="verifier-title"><p class="eyebrow small">THE VERIFIER'S FINDING</p><h3 id="verifier-title">Awaiting evidence</h3><p id="diagnosis"></p><div class="verifier-footer"><span id="window-result" class="mono"></span><span class="mono">[54,000, 72,000)</span></div></section>
+        </div>
+        <details class="trace-panel"><summary><span>Inspect the event ledger <span id="event-count" class="muted"></span></span><span class="mono">SELECTED WINDOW ↓</span></summary><div class="table-scroll"><table><caption class="sr-only">Synthetic events for the selected verification window</caption><thead><tr><th>Tick</th><th>Event</th><th>Source label</th><th>Quantity</th></tr></thead><tbody id="events"></tbody></table></div><p>These generated labels illustrate evidence structure. A native adapter must establish provenance from game telemetry.</p></details>
+      </section>
+      <section id="method" class="method" aria-labelledby="method-title"><div class="section-heading"><h2 id="method-title"><span class="section-number">02</span> From action to evidence</h2><a href="https://github.com/cytonomy/factorio-bench/blob/main/docs/factorio-bench-design.md">Read the environment design ↗</a></div><div class="method-grid"><article><span class="method-number">A /</span><h3>Give the agent a world.</h3><p>The proposed native backend pins the game, starting conditions, and action budget. The agent works through a constrained interface.</p></article><article><span class="method-number">B /</span><h3>Let the factory run.</h3><p>A hands-off interval separates building from operation. The task asks for sustained extraction, smelting, and useful delivery.</p></article><article><span class="method-number">C /</span><h3>Make the verdict inspectable.</h3><p>This demo generates synthetic events and recomputes each verdict in Python. Real game evidence and agent trials are the next step.</p></article></div></section>
+    </main>
+    <footer><span class="footer-brand">factorio–bench <span>/ by Cytonomy</span></span><p>Independent project. Not affiliated with Wube Software.<br>Source available · PolyForm Noncommercial 1.0.0</p><a href="https://github.com/cytonomy/factorio-bench">Explore the repository ↗</a></footer>
+    <p id="announcement" class="sr-only" aria-live="polite"></p>
+  </div>
+</body>
+</html>

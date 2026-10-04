@@ -1,8 +1,38 @@
 # Factorio-Bench
 
-Factorio-Bench is a proposed environment for evaluating AI agents on factory construction, production, logistics, diagnosis, and long-horizon planning in Factorio.
+### Build a factory. Prove it works.
 
-**Status: design only.** This repository contains the environment design and contribution safeguards. It does not yet contain a runnable benchmark, game integration, simulator, or benchmark results.
+An environment design for evaluating AI agents on factory construction, production, logistics, and long-horizon planning. The central question: **does the factory keep working after the agent stops?**
+
+**Now:** a runnable synthetic evidence lab, three reproducible examples, and the native benchmark design. **Next:** integration with real Factorio. No game backend, simulator, or AI benchmark results are included yet.
+
+[Run the demo](#try-the-evidence-lab) · [Explore the examples](docs/examples.md) · [Read the design](docs/factorio-bench-design.md) · [Implementation roadmap](docs/factorio-bench-design.md#implementation-milestones-and-acceptance)
+
+![The Factorio-Bench evidence lab: original factory schematic, five production windows, and an inspectable verdict. Synthetic data; no game or AI model was run.](docs/assets/showcase-desktop.png)
+
+*Actual browser capture of the included viewer. Original schematic and synthetic events, not Factorio gameplay. [Mobile view](docs/assets/showcase-mobile.png) · [Image provenance](docs/assets/README.md)*
+
+## Try the evidence lab
+
+With Python 3.9 or later and Make, no packages or credentials are needed:
+
+```sh
+git clone https://github.com/cytonomy/factorio-bench.git
+cd factorio-bench
+make demo
+```
+
+Open **http://127.0.0.1:8765**. Select a scenario, play or scrub the five verification windows, and open the event ledger. The server listens only on your computer; Ctrl+C stops it.
+
+Run `make examples` for the command-line version, or `python3 scripts/run_examples.py` if Make is unavailable. See [the example guide](docs/examples.md) for setup, scoring rules, and limitations.
+
+| Synthetic example | Outcome | What the evidence reveals |
+| --- | --- | --- |
+| **Steady line** | Pass · 5/5 windows | 208 automated deliveries, sustained across the full interval |
+| **Fuel starved** | Fail · 2/5 windows | Early output hides a later collapse in smelting and delivery |
+| **Hand fed** | Fail · 0/5 windows | 160 player deposits cannot substitute for automated delivery |
+
+The verifier recomputes these outcomes from generated events. These are test fixtures, **not measurements of a game or an AI agent**. The fuel shortage is an authored explanation; production counters alone cannot establish its cause.
 
 ## Approach
 
@@ -19,6 +49,7 @@ The proposed long-term scope includes the base game and Space Age under separate
 
 | Document | Purpose |
 | --- | --- |
+| [Evidence demo](docs/examples.md) | Run the examples, explore their outcomes, and understand what they do not prove |
 | [Environment design](docs/factorio-bench-design.md) | Mechanics, agent interface, clocks, tasks, scoring, and acceptance gates |
 | [Documentation index](docs/README.md) | Find architecture, evaluation, and implementation sections |
 | [Contributing](CONTRIBUTING.md) | Propose changes, write evidence-based documentation, and run checks |

@@ -1,6 +1,6 @@
 # Repository instructions
 
-Factorio-Bench currently contains a proposed design and repository checks. Do not describe the environment, simulator, integrations, or benchmark results as implemented until they exist and have been verified.
+Factorio-Bench currently contains a proposed design, a runnable synthetic evidence demo, and repository checks. The demo is not a game backend or an AI evaluation. Do not describe the environment, simulator, integrations, or benchmark results as implemented until they exist and have been verified.
 
 ## Protect private information
 

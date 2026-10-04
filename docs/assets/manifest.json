@@ -1,0 +1,21 @@
+{
+  "schema_version": "factorio-bench.public-media.v1",
+  "assets": [
+    {
+      "path": "docs/assets/showcase-desktop.png",
+      "sha256": "60610376cc70ecda8ca4e69597a8ac7c28f6549e41dfb3f1d2fee536de2ade28",
+      "width": 1328,
+      "height": 906,
+      "provenance": "Original synthetic showcase captured in local Chrome. Desktop explorer crop at 1440px viewport, steady-line window 1. Browser content only; no game or model was run. Ancillary metadata removed; exported image visually reviewed.",
+      "reviewed": true
+    },
+    {
+      "path": "docs/assets/showcase-mobile.png",
+      "sha256": "24ff61b65dd481a27e0558d36c7445e829fe06d85ad92a503720941112366a98",
+      "width": 390,
+      "height": 2199,
+      "provenance": "Original synthetic showcase captured in local Chrome. Full mobile page at 390px viewport, fuel-starved window 3. Browser content only; no game or model was run. Ancillary metadata removed; exported image visually reviewed.",
+      "reviewed": true
+    }
+  ]
+}
